@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+    /*white*/
+    --color-white-100: #FFFFFF;
+
+    /*purple*/
+    --color-purple-500: #674ebc,
+}
+
+@layer base {
+    body {
+        @apply text-base m-0 p-0;
+    }
+
+    a {
+        @apply outline-none;
+    }
+
+    textarea {
+        @apply outline-none resize-none;
+    }
+}
+
+@layer components {
+    .mobile-menu {
+        @apply fixed left-0 right-0 top-17 z-50 p-6 h-fit bg-[rgba(255,255,255,0.05)] w-full border border-[rgba(255,255,255,0.2)] rounded-[20px] backdrop-filter backdrop-blur-[10px];
+    }
+}
